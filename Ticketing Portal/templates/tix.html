@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile App</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/tix.css') }}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@900&family=Open+Sans:wght@600&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    
+  </head>
+
+  <body>
+    <p class="date">Date: 24th Feb 2023</p>
+    <p class="location">Taj Mahal, Agra, India</p>
+    <div class="profile-picture">
+      <img
+        src="{{ url_for('static', filename='person_image.jpg') }}"
+        alt="Profile Picture"
+      />
+    </div>
+
+    <div class="profile-info">
+      <p>Name: {{ extracted_info[0] }}</p>
+      <p>Date of birth: {{extracted_info[2]}}</p>
+      <p>Aadhaar Card No: {{ extracted_info[1] }}</p>
+      <p>Phone No: +91 7817842904</p>
+    </div>
+
+    <div class="qr-code-container">
+      <img
+        class="qr-code"
+        src="{{ url_for('static', filename='images/qr-code.png')}}"
+        alt="QR Code"
+      />
+    </div>
+
+      <div class="save">
+        <button onclick="printTicket()">Download Ticket</button>
+      </div>
+    </div>
+    <script>
+      function printTicket() {
+        window.print();
+      }
+    </script>
+  </body>
+</html>

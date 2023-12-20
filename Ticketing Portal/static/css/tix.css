@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@900&family=Open+Sans:wght@600&family=Ubuntu:wght@500&display=swap");
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  background-image: url(../images/backg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 101%;
+}
+
+.info-box {
+  position: absolute;
+  top: 20px; /* Adjusted top margin */
+  width: 84%;
+  height: 30px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 45px;
+  overflow: hidden;
+  text-align: left;
+  z-index: 2;
+}
+
+.info-box p {
+  margin: 0;
+  padding: 5px 0;
+  color: white;
+  font-weight: bold;
+  font-family: "Sans-serif", sans-serif;
+}
+
+.date {
+  position: absolute;
+  margin-top: -370px;
+  margin-left: -260px;
+  /* float: left; */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: maroon;
+}
+
+.location {
+  position: absolute;
+  margin-top: -370px;
+  margin-left: 400px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: maroon;
+}
+
+.profile-container {
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Added to clip the circular corners */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 66.66vh;
+  margin-top: 230px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 30%;
+  padding: 5px;
+  box-sizing: content-box;
+  position: relative;
+  z-index: 2;
+  margin-top: 20px; /* Adjusted margin */
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  margin-top: 225px;
+  margin-left: 550px;
+  border: #333 solid 3px;
+}
+
+.profile-picture:after {
+  content: "";
+  scale: 1.2;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 30px;
+  box-sizing: content-box;
+}
+
+.profile-info {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  margin: 0 auto;
+  z-index: 2;
+  margin-bottom: -20px;
+  margin-left: 350px;
+  font-size: 1.2rem;
+}
+
+.profile-info p {
+  margin: 10px 0;
+}
+
+.qr-code-container {
+  margin-top: auto;
+  margin-bottom: 20px; /* Adjusted margin */
+}
+
+.qr-code {
+  min-width: 180px;
+  margin: 15px auto; /* Adjusted margin */
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-left: -638px;
+  margin-top: -237px;
+}
+
+.dark-bg {
+  background-color: #333;
+  border-radius: 15px 15px 15px 15px; /* Rounded corners */
+  position: fixed;
+  bottom: 0;
+  left: 25px; /* Adjusted left margin */
+  right: 25px; /* Adjusted right margin */
+  width: calc(
+    100% - 50px
+  ); /* Adjusted width to accommodate left and right margins */
+  height: 66.66vh;
+  padding-top: 30px; /* Added padding */
+  margin-bottom: 25px; /* Adjusted bottom margin */
+  box-sizing: border-box;
+  z-index: 1;
+}
+.offwhite-bg {
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 50%; /* Set the height for the bottom half */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.save {
+  position: absolute;
+  margin-top: -700px;
+}
+
+.save button {
+  background-color: #e5bfa7;
+  color: white;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 5px;
+  padding: 13px;
+  /* width: 100%; */
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-left: 1200px;
+}

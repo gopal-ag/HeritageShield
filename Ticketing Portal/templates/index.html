@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heritage Shield Ticket Booking</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=goodfont"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+    <script src="https://kit.fontawesome.com/fc383a6465.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+  </head>
+
+
+  <body>
+    <h1>Heritage Shield Ticket Booking</h1>
+
+    <div class="nav-cent">
+    <nav>
+			
+			
+			<ul>
+				<li><a href="/">home</a></li>
+				<li><a href="/">about us <i class="fas fa-chevron-down"></i></a>
+					<ul>
+						<li><a href="#">team 1</a></li>
+						<li>
+							<ul>
+								<li><a href="/">menu 1</a></li>
+								<li><a href="/">menu 2</a></li>
+								<li><a href="/">menu 3</a></li>
+								<li><a href="/">menu 4</a></li>
+							</ul>
+							<a href="/">team 2 <i class="fas fa-chevron-right"></i></a>
+						</li>	
+						<li><a href="/">team 3</a></li>
+						<li><a href="/">team 4</a></li>
+					</ul>	
+				</li>
+				<li><a href="/">projects</a></li>
+				<li><a href="/">news</a></li>
+				<li><a href="/">gallery</a></li>
+				<li><a href="/">blog</a></li>
+				<li><a href="/">contact</a></li>
+			</ul>		
+		</nav>
+  </div>
+
+
+
+    <div class="centered-container">
+      <div class="left-side">
+        <img
+          class="main-img"
+          src="{{ url_for('static',
+        filename='images/Taj-Mahal.jpg')}}"
+        />
+
+        <img
+          class="cards card1-img"
+          src="{{ url_for('static',
+        filename='images/card1.jpeg')}}"
+        />
+
+        <h2 class="img-text"> Protecting the past, </br> Securing the future </h2>
+        <button class="but-card8">Book Now</button>
+
+
+        <button class="but-card1">Book Now</button>
+        <img
+          class="cards card2-img"
+          src="{{ url_for('static',
+        filename='images/card2.jpeg')}}"
+        />
+        <button class="but-card2">Book Now</button>
+      </div>
+
+      <div class="right-side">
+        <div class="gray-container">
+          <h2 class="sub-heading-right">Book a Ticket</h2>
+          <div class="option-container">
+            <div class="option-1" id="option1">
+              <button class="option-btn" onclick="showImageOption()">
+                Scan your ID
+              </button>
+
+              <div class="option-3" id="option3">
+                        <button class="option-btn webcam-btn" onclick="showWebcamOption()">
+                            Use Webcam
+                        </button>
+              </div>
+
+            </div>
+            <div class="option-2" id="option2">
+              <button class="but2" onclick="showFormOption()">
+                Fill the form manually
+              </button>
+            </div>
+          </div>
+
+
+
+
+     <div id="webcamCaptureSection" style="display: none;">
+    <video id="webcam" width="640" height="480" autoplay></video>
+    <button class="capture" id="capture">Capture Image</button>
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+</div>
+
+
+
+          <div id="imageOption" style="display: none">
+            <form method="post" enctype="multipart/form-data" id="imageForm">
+              <input type="file" name="file" accept="image/*" required />
+              <button type="submit">Upload and Extract</button>
+            </form>
+          </div>
+
+          <div id="formOption" style="display: none">
+            <form method="post" action="/book_tickets">
+              <h2>Fill Form Manually</h2>
+              <input type="text" name="name" placeholder="Name" required />
+              <input
+                type="text"
+                name="id_number"
+                placeholder="ID Card Number"
+                required
+              />
+              <input
+                type="text"
+                name="dob"
+                placeholder="Date of Birth"
+                required
+              />
+              <input
+                type="text"
+                name="address"
+                placeholder="Address"
+                required
+              />
+              <button type="submit">Book Tickets</button>
+            </form>
+          </div>
+          {% if extracted_info %}
+          <form method="get" action="https://buy.stripe.com/test_14keXD4n7gcNbZu5ko">
+            <h4 class="blck">Extracted Information:</h4>
+            <input
+              type="text"
+              name="name"
+              value="{{ extracted_info[0] }}"
+              placeholder="Name"
+              required
+            />
+            <input
+              type="text"
+              name="id_number"
+              value="{{ extracted_info[1] }}"
+              placeholder="ID Card Number"
+              required
+            />
+            <input
+              type="text"
+              name="dob"
+              value="{{ extracted_info[2] }}"
+              placeholder="Date of Birth"
+              required
+            />
+            <input
+              type="text"
+              name="address"
+              value="{{ extracted_info[3] }}"
+              placeholder="Address"
+              required
+            />
+
+            <label for="visit_datetime" class="blck"
+              >Visiting Date and Time:</label
+            >
+            <input type="datetime-local" name="visit_datetime" required />
+
+            <label for="monument" class="blck">Select Monument:</label>
+            <select name="monument" required>
+              <option value="monument1" class="black">Taj Mahal</option>
+              <option value="monument2" class="black">Red Fort</option>
+            </select>
+            <button type="submit">Verify and Book Tickets</button>
+          </form>
+
+          {% if extracted_info[5] %}
+          <h3 class="blck">Person's Image:</h3>
+          <div class="person_img">
+            <img
+              src="{{ url_for('static', filename='person_image.jpg') }}"
+              alt="Person's Image"
+            />
+          </div>
+          {% endif %} {% endif %}
+        </div>
+      </div>
+    </div>
+    <h3 class="footer">Made with ❤️ by Team-Kavach</h3>
+    <script>
+      function showImageOption() {
+        document.getElementById("imageOption").style.display = "block";
+        document.getElementById("formOption").style.display = "none";
+        document.getElementById("option1").style.display = "none";
+        document.getElementById("option2").style.display = "none";
+      }
+
+      function showFormOption() {
+        document.getElementById("imageOption").style.display = "none";
+        document.getElementById("formOption").style.display = "block";
+        document.getElementById("option1").style.display = "none";
+        document.getElementById("option2").style.display = "none";
+      }
+
+      function showWebcamOption() {
+        document.getElementById("webcamCaptureSection").style.display = "block";
+        document.getElementById("imageOption").style.display = "none";
+        document.getElementById("formOption").style.display = "none";
+        startWebcam();
+    }
+        function startWebcam() {
+            let video = document.getElementById('webcam');
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+                    video.srcObject = stream;
+                    video.play();
+                });
+            }
+        }
+
+         document.getElementById('capture').addEventListener('click', function () {
+        let canvas = document.getElementById('canvas');
+        let context = canvas.getContext('2d');
+        let video = document.getElementById('webcam');
+        context.drawImage(video, 0, 0, 640, 480);
+
+        canvas.toBlob(function (blob) {
+            let formData = new FormData();
+            formData.append('webcamImage', blob);
+
+            fetch('/', {
+                method: 'POST',
+                body: formData
+            }).then(response => response.json()).then(data => {
+                console.log(data);
+                // Redirect to ticket page or handle the response
+                window.location.href = '/ticket'; // Redirect to the ticket page
+            });
+        }, 'image/jpeg');
+    });
+    </script>
+  </body>
+</html>

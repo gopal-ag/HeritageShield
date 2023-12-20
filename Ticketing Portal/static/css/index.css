@@ -1,0 +1,344 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "YourChosenFont", sans-serif; /* Use your chosen font here */
+  background: skyblue;
+
+  /* Adjust gradient colors */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white; /* Text color */
+  /* max-width: 100vh; */
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.centered-container {
+  scale: 1.1;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 20px;
+}
+
+.left-side {
+  width: 50%;
+  position: relative; /* Add position relative for z-index */
+  z-index: 2; /* Ensure the image is on top */
+  margin-left: 125px;
+}
+
+.right-side {
+  width: 50%;
+  position: relative; /* Add position relative for negative margin */
+  margin-top: -20px; /* Adjust the margin to hide the corners behind the image */
+  z-index: 1; /* Lower z-index to be below the image */
+  padding-left: 30px;
+}
+
+.gray-container {
+  position: absolute;
+  background-color: white; /* Gray background for the container */
+  /* padding: 20px; */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+  height: 100%; /* Set height to 100% */
+  overflow: hidden; /* Prevent content overflow */
+  min-width: 300px;
+  min-height: 580px;
+  margin-top: 40px;
+  margin-left: 120px;
+  z-index: 1;
+  padding-top: 20px;
+}
+
+.sub-heading-right {
+  color: darkblue;
+  font-size: 1.8rem;
+  margin-left: 58px;
+}
+
+.option-container {
+  text-align: center;
+  margin-left: 50px;
+  columns: 2;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.option-btn {
+  background-color: #df6c71;
+  color: white;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  width: 100%;
+  margin-left: -10px;
+}
+
+.webcam-btn {
+  margin-left: 90px;
+}
+
+.but2 {
+  background-color: #df6c71;
+  color: white;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  width: 100%;
+  margin-left: -20px;
+}
+.option-2 button {
+  padding-right: 2px;
+  margin-left: 0px;
+}
+.capture {
+  position: absolute;
+  margin-top: 400px;
+  margin-left: -360px;
+  min-width: 60px;
+  z-index: 99999999;
+  scale: 1;
+}
+form {
+  z-index: 1;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-top: 20px;
+  min-width: 200px;
+  min-height: 600px;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #df6c71;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.person_img {
+  z-index: 9900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.main-img {
+  position: absolute;
+  z-index: 2;
+  border-radius: 20px;
+  margin-top: 20px;
+  max-height: 600px;
+  max-width: 900px;
+  margin-left: -600px;
+}
+
+.footer {
+  z-index: 99;
+  color: white;
+  margin-top: 750px;
+}
+
+.card1-img {
+  position: absolute;
+  max-width: 400px;
+  max-width: 300px;
+  z-index: 102;
+  border-radius: 30px;
+  margin-top: 420px;
+  margin-left: -525px;
+}
+
+.card2-img {
+  position: absolute;
+  max-width: 400px;
+  max-width: 300px;
+  z-index: 102;
+  border-radius: 30px;
+  margin-top: 416px;
+  margin-left: -200px;
+  scale: 0.94;
+}
+.blck {
+  color: #000;
+}
+
+.but-card1 {
+  position: absolute;
+  margin-top: 541px;
+  margin-left: -355px;
+  z-index: 999;
+  width: 100%;
+  min-width: 85px;
+  padding: 10px;
+}
+.but-card2 {
+  position: absolute;
+  margin-top: 541px;
+  margin-left: -29px;
+  z-index: 999;
+  width: 100%;
+  min-width: 85px;
+  padding: 10px;
+  z-index: 999;
+}
+
+.but-card8 {
+  position: absolute;
+  margin-top: 541px;
+  margin-left: -29px;
+  z-index: 999;
+  width: 100%;
+  min-width: 85px;
+  padding: 10px;
+  z-index: 999;
+}
+
+.but-card4 {
+  position: absolute;
+  margin-top: 541px;
+  margin-left: -29px;
+  z-index: 999;
+  width: 100%;
+  min-width: 85px;
+  padding: 10px;
+}
+
+.img-text {
+  position: absolute;
+  z-index: 9999;
+  margin-left: -527px;
+  margin-top: 100px;
+  color: darkblue;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: arial;
+  background-image: url(https://cdn.pixabay.com/photo/2016/10/14/19/21/canyon-1740973_960_720.jpg);
+  background-size: cover;
+}
+
+nav {
+  height: var(--navheight);
+  border-top: 1px solid rgb(255, 255, 255, 0.2);
+  width: 80%;
+  margin: 20px auto 0px;
+}
+
+nav h4 {
+  color: var(--white);
+  line-height: var(--navheight);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  float: left;
+  padding: 0px 60px;
+}
+
+nav i {
+  font-size: 11px;
+}
+
+nav ul li ul li i {
+  float: right;
+}
+
+nav ul {
+  float: left;
+}
+
+nav ul li {
+  position: relative;
+  float: left;
+  list-style-type: none;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: var(--white);
+  letter-spacing: 2px;
+  border: 0px solid red;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 22px 12px;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  border-radius: 2px;
+}
+
+nav ul li ul li {
+  width: 180px;
+  border-radius: 0px 0px 2px 2px;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+nav ul li ul li a {
+  padding: 15px 12px;
+  color: var(--black);
+}
+
+nav ul li ul li a:hover {
+  background-color: gray;
+  color: var(--white);
+  border-radius: 2px;
+}
+
+nav ul li ul li ul {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  border-radius: 2px;
+  margin-left: 180px;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul li ul li:hover > ul {
+  display: block;
+}
+
+.nav-cent {
+  margin-left: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
