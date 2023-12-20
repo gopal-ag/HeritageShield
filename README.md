@@ -6,7 +6,7 @@
 
 The Heritage Site Personnel Portal is designed to assist the staff of heritage sites in monitoring and managing various aspects of the site. This includes tracking vandalism, managing the number of visitors, handling littering issues, overseeing lost and found requests, and monitoring the status of electronic fines (e-Chalaans).
 
-###Features
+### Features
 - Vandalism Monitoring
 Displays photos of individuals caught vandalizing the monument.
 Shows the specific camera that captured the vandalism.
