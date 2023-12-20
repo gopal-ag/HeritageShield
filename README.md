@@ -26,6 +26,7 @@ Indicates the specific camera that captured the littering incident.
   
 Tracks lost and found requests.
 Utilizes backtracking to locate lost or found objects.
+Backtracking in the context of identifying the owner of lost objects at a heritage site involves analyzing security camera footage to trace the movements and actions of individuals, particularly those who have lost or found items. This process aims to establish a connection between the object and its rightful owner
 
 - E-Chalaan Status
 Provides information on previously sent e-Chalaans, including the date sent and the deadline for payment.
