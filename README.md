@@ -1,5 +1,39 @@
 # HeritageShield
 # SIH 2023
+
+## Vandalism Detection System (YOLOv8 Ultralytics)
+
+### Overview
+
+The Vandalism Detection System is a pioneering solution in heritage site preservation, marking the first time in the world such advanced technology has been employed for vandalism identification. It utilizes the YOLOv8 Ultralytics model, integrated with PyTorch and semantic segmentation techniques. This system is uniquely designed to accurately distinguish between actual vandalism and legitimate decorative elements of heritage sites, using a custom-built vandalism dataset of 6,000 images enhanced with Albumentations and augmentation techniques.
+
+### Key Features
+
+- World's First Advanced Vandalism Detection
+  
+First-of-its-kind implementation using YOLOv8 Ultralytics model.
+Custom-made dataset of 6,000 images specifically for vandalism detection.
+  
+- Enhanced Accuracy with Semantic Segmentation
+  
+Employs semantic segmentation to discern vandalism from legitimate designs.
+Significantly reduces false positives.
+
+- Integration with Surveillance Systems
+  
+Seamlessly integrates with existing CCTV and surveillance infrastructure.
+
+- Real-time Alerts
+  
+Instant notifications to site personnel upon detection of vandalism.
+
+### System Requirements
+
+Python 3.6 or later.
+PyTorch 1.8 or later.
+Ultralytics YOLOv8 package.
+Compatible hardware for running deep learning models (GPU recommended).
+
 ## Heritage Site Personnel Portal
 
 ### Overview
