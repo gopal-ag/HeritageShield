@@ -34,6 +34,41 @@ PyTorch 1.8 or later.
 Ultralytics YOLOv8 package.
 Compatible hardware for running deep learning models (GPU recommended).
 
+## Litter Detection Model
+The YOLOv8 Ultralytics Litter Detection Model, developed using PyTorch, represents a cutting-edge approach to environmental cleanliness.
+It utilizes the latest YOLO (You Only Look Once) version 8 for real-time object detection, specifically trained to identify various types of litter with high accuracy.
+The model's efficiency lies in its speed and precision, making it ideal for monitoring public spaces, parks, and heritage sites.
+
+## Reverse Lost and found System
+### Overview
+
+The Reverse Lost and Found System is an innovative solution employing BlazeFace, MediaPipe, Ultralytics, and OpenCV for effective backtracking. This system is designed to identify and return lost items to their owners by analyzing surveillance footage in public spaces, parks, and heritage sites.
+
+### Key Features
+
+- Advanced Object and Facial Recognition
+  
+Utilizes BlazeFace for facial recognition and MediaPipe for advanced object tracking.
+Employs Ultralytics for object detection to identify lost items.
+
+- Efficient Backtracking Algorithm
+  
+Implements OpenCV for real-time video processing and backtracking lost items to their owners.
+Traces the movement of individuals and items in reverse to locate the point of loss.
+
+- Integration with Surveillance Systems
+  
+Seamlessly integrates with existing camera and surveillance infrastructure.
+
+- User-Friendly Interface
+Provides a simple and intuitive interface for system operators to manage lost and found items.
+
+### System Requirements
+
+- Python 3.6 or later.
+- BlazeFace, MediaPipe, Ultralytics, and OpenCV libraries.
+- Compatible hardware for processing video feeds (GPU recommended).
+
 ## Heritage Site Personnel Portal
 
 ### Overview
