@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Chalaan</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+      body {
+        background-color: black;
+        color: white;
+
+        font-family: 'Lato', sans-serif;
+      }
+      .heading {
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        text-shadow: 2px 2px 8px rgba(128, 128, 128, 1);
+        font-size: 75px;
+        margin-top: 30px;
+      }
+      .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+      }
+      .card {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 200px;
+        background-color: white;
+        color: black;
+        border-radius: 14px;
+        margin-left: 10%;
+        margin-right: 10%;
+        gap: 55px;
+        box-shadow: 2px 2px 8px rgba(128, 128, 128, 1);
+      }
+      .recepient {
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        gap: 40px;
+        margin-left: 20px;
+        flex-basis: 400px;
+      }
+      .h {
+        font-size: 28px;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        /* margin-left: 5px; */
+        /* justify-content: flex-start;
+            align-items: flex-start; */
+        justify-self: flex-start;
+        align-self: center;
+        padding-right: 25px;
+        padding-top: 20px;
+      }
+      .name {
+        font-size: 50px;
+        justify-self: center;
+        align-self: center;
+        font-weight: 600;
+      }
+      .image {
+        height: 180px;
+        width: 180px;
+        border-radius: 12px;
+        mix-blend-mode: darken;
+        border: #222 solid 2px;
+      }
+      .offense {
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        gap: 40px;
+        /* margin-left: 10px; */
+      }
+      .oh {
+        font-size: 28px;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        /* margin-left: 5px; */
+        /* justify-content: flex-start;
+            align-items: flex-start; */
+        /* justify-self: flex-start; */
+        align-self: center;
+        padding-right: 25px;
+      }
+      .off {
+        font-size: 40px;
+        justify-self: center;
+        align-self: center;
+        font-weight: 500;
+      }
+      .status {
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        gap: 40px;
+        padding-top: 40px;
+        /* margin-left: 10px; */
+      }
+      .oh {
+        padding-top: 20px;
+      }
+      .head {
+        font-size: 28px;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+        margin-left: 5px;
+        /* justify-content: flex-start;
+            align-items: flex-start; */
+        justify-self: center;
+        align-self: center;
+        padding-right: 25px;
+      }
+      .stat-pending {
+        font-size: 40px;
+        justify-self: center;
+        align-self: center;
+        font-weight: 500;
+        color: brown;
+      }
+      .stat-paid {
+        font-size: 40px;
+        justify-self: center;
+        align-self: center;
+        font-weight: 500;
+        color: green;
+      }
+      .logo {
+        margin: 30px;
+        max-width: 300px;
+        max-height: 100px;
+      }
+      .footer {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      .logo-div {
+        margin-left: -240px;
+      }
+      .logo {
+        margin: 30px;
+        max-width: 300px;
+        max-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/">
+      <div class="logo-div">
+        <img
+          src="{{ url_for('static', filename='imgs/lost_and_found_imgs/logo.png')}}"
+          alt="logo"
+          class="logo"
+          height="100px"
+          width="300px"
+          style="margin-left: 15%"
+        />
+      </div>
+    </a>
+    <h1 class="heading">E-Challan Status</h1>
+    <div class="cards">
+      <div class="card">
+        <div class="recepient">
+          <div class="h">Recepient Name</div>
+          <div class="name">Pranjal Kishor</div>
+        </div>
+        <div class="image">
+          <img
+            src="{{ url_for('static', filename='imgs/lost_and_found_imgs/Pranjal.jpg')}}"
+            class="image"
+            alt=""
+          />
+        </div>
+        <div class="offense">
+          <div class="oh">Offense</div>
+          <div class="off">Vandalism</div>
+        </div>
+        <div class="status">
+          <div class="head">Status</div>
+          <div class="stat-pending">
+            Pending
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="30"
+              fill="currentColor"
+              class="bi bi-x-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="recepient">
+          <div class="h">Recepient Name</div>
+          <div class="name">Shaurya Verma</div>
+        </div>
+        <div class="image">
+          <img
+            src="{{ url_for('static', filename='imgs/lost_and_found_imgs/Shaurya.jpg')}}"
+            class="image"
+            alt=""
+          />
+        </div>
+        <div class="offense">
+          <div class="oh">Offense</div>
+          <div class="off">Vandalism</div>
+        </div>
+        <div class="status">
+          <div class="head">Status</div>
+          <div class="stat-paid">
+            Paid
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="30"
+              fill="currentColor"
+              class="bi bi-check-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <footer><p>Made with ❤️ by Team Kavach</p></footer>
+    </div>
+  </body>
+</html>

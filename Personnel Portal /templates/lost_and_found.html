@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Lost and Found Status</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+      body {
+        background-color: #222;
+        color: white;
+        font-family: 'Lato', sans-serif;
+      }
+      .logo-div {
+        margin-left: -240px;
+      }
+      .logo {
+        margin: 30px;
+        max-width: 300px;
+        max-height: 100px;
+      }
+      .heading {
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        text-shadow: 2px 2px 8px rgba(128, 128, 128, 0.7);
+        font-size: 75px;
+        margin-top: 30px;
+        color: #f8f8f8;
+      }
+      .lost,
+      .found {
+        margin-left: 250px;
+        font-size: 60px;
+        font-family: 'Times New Roman', Times, serif;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-shadow: 2px 2px 8px rgba(128, 128, 128, 0.7);
+      }
+      .lost-card {
+        width: 70%;
+        height: 160px;
+        border-radius: 14px;
+        margin: 30px 15%;
+        background-color: white;
+        color: #222;
+      }
+      .lost-card {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        justify-content: space-around;
+        gap: 5%;
+      }
+      .article {
+        font-size: 40px;
+        font-weight: 600;
+        flex-basis: 50%;
+      }
+      .article-card {
+        height: fit-content;
+        border-radius: 12px;
+        border: none;
+        background-color: rgb(20, 20, 20);
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        /* padding: 5px; */
+      }
+      .article-image {
+        height: 150px;
+        width: 160px;
+        border-radius: 12px 12px 0px 0px;
+        border: none;
+        margin-bottom: 10px;
+        mix-blend-mode: lighten;
+      }
+      .owner-card {
+        height: fit-content;
+        border-radius: 12px;
+        background-color: rgb(20, 20, 20);
+        color: white;
+        text-align: center;
+        font-size: 18px;
+      }
+      .time {
+        padding-bottom: 10px;
+      }
+      .owner {
+        padding-bottom: 10px;
+      }
+      .potential {
+        margin-left: 1070px;
+        font-size: 1.5rem;
+      }
+      .lost-item {
+        margin-left: 870px;
+        font-size: 1.5rem;
+        margin-bottom: -30px;
+      }
+      .found-item {
+        margin-bottom: -30px;
+        margin-left: 850px;
+        font-size: 1.5rem;
+      }
+      .complained-owner {
+        margin-left: 1070px;
+        font-size: 1.5rem;
+      }
+      .culprits {
+        padding: auto;
+      }
+      .footer {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/">
+      <div class="logo-div">
+        <img
+          src="{{ url_for('static', filename='imgs/lost_and_found_imgs/logo.png') }}"
+          alt="logo"
+          class="logo"
+          height="100px"
+          width="300px"
+          style="margin-left: 15%"
+        />
+      </div>
+    </a>
+
+    <h1 class="heading">Lost And Found</h1>
+    <div class="lost">Lost Requests</div>
+    <div class="lost-item">Lost Item</div>
+    <div class="complained-owner">Complain filed by</div>
+    <div class="lost-cards">
+      <div class="lost-card">
+        <div class="article">HandBag</div>
+        <div class="article-card">
+          <img
+            src="{{ url_for('static', filename='imgs/lost_and_found_imgs/handbag1.jpeg')}}"
+            alt="article-image"
+            class="article-image"
+          />
+          <div class="time">Time: 10 A.M.</div>
+        </div>
+        <div class="owner-card">
+          <img
+            src="{{ url_for('static', filename='imgs/lost_and_found_imgs/pranjal.jpeg') }}"
+            alt="article-image"
+            class="article-image"
+          />
+          <div class="owner">Manvi Khurana</div>
+        </div>
+      </div>
+      <div class="lost-card">
+        <div class="article">Laptop Bag</div>
+        <div class="article-card">
+          <img
+            src="{{ url_for('static', filename='imgs/lost_and_found_imgs/laptop-bag1.jpeg')}}"
+            alt="article-image"
+            class="article-image"
+          />
+          <div class="time">Time: 2:34 P.M.</div>
+        </div>
+        <div class="owner-card">
+          <img
+            src="{{ url_for('static', filename='imgs/lost_and_found_imgs/Shaurya.jpg')}}"
+            alt="article-image"
+            class="article-image"
+          />
+          <div class="owner">Shaurya Agarwal</div>
+        </div>
+      </div>
+    </div>
+    <div class="found">Found</div>
+    <div class="found-item">Found Item</div>
+    <div class="potential">Potential Owner</div>
+    <div class="lost-cards">
+      <div class="lost-card">
+        <div class="article">HandBag</div>
+        <div class="article-card">
+          <img
+            src="{{ url_for('static', filename='imgs/lost_and_found_imgs/handbag1.jpeg')}}"
+            alt="article-image"
+            class="article-image"
+          />
+          <div class="time">Time: 6:36 P.M.</div>
+        </div>
+        <div class="owner-card">
+          <img
+            src="{{ url_for('static', filename='imgs/lost_and_found_imgs/pranjal.jpeg')}}"
+            alt="article-image"
+            class="article-image"
+          />
+          <div class="owner">Manvi Khurana</div>
+        </div>
+      </div>
+      <div class="lost-card">
+        <div class="article">Laptop Bag</div>
+        <div class="article-card">
+          <img
+            src="{{ url_for('static', filename='imgs/lost_and_found_imgs/laptop-bag1.jpeg')}}"
+            alt="article-image"
+            class="article-image"
+          />
+          <div class="time">Time: 7:06 P.M.</div>
+        </div>
+        <div class="owner-card">
+          <img
+            src="{{ url_for('static', filename='imgs/lost_and_found_imgs/Shaurya.jpg')}}"
+            alt="article-image"
+            class="article-image"
+          />
+          <div class="owner">Shaurya Agarwal</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <footer><p>Made with ❤️ by Team Kavach</p></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Litter Culprits</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+      body {
+        background-color: black;
+        color: white;
+
+        font-family: 'Lato', sans-serif;
+      }
+
+      .logo {
+        margin: 30px;
+        max-width: 300px;
+        max-height: 100px;
+      }
+      .heading {
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        text-shadow: 2px 2px 8px rgba(128, 128, 128, 1);
+        font-size: 75px;
+        margin-top: 30px;
+      }
+      /* Float four columns side by side */
+      .column {
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+      }
+
+      /* Remove extra left and right margins, due to padding in columns */
+      .row {
+        margin: 0 -5px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+
+      /* Style the counter cards */
+      .card1 {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+        padding: 16px;
+        text-align: center;
+        background-color: #f1f1f1;
+        border-radius: 25px;
+        box-shadow: 10px 10px 10px gray;
+        min-height: 380px;
+        margin: 10px;
+      }
+      .card1 img {
+        max-height: 270px;
+        max-width: fit-content;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      /* Responsive columns - one column layout (vertical) on small screens */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+
+      h3 {
+        color: rgb(27, 26, 26);
+      }
+
+      html {
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+
+      *,
+      *:after,
+      *:before {
+        box-sizing: border-box;
+      }
+      .footer {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/">
+      <img
+        src="{{ url_for('static', filename='imgs/logo.png') }}"
+        alt="logo"
+        class="logo"
+        height="100px"
+        width="300px"
+        style="margin-left: 0%"
+      />
+    </a>
+    <h1 class="heading">Littering Culprits</h1>
+
+    <div class="row">
+      <div class="column">
+        <a href="/peopleinmonument">
+          <div class="card1">
+            <img
+              src="{{ url_for('static', filename='imgs/lost_and_found_imgs/pranjal.jpeg') }}"
+            />
+            <h3>Shreya Ghoshal</h3>
+            <p>Date: 2024-02-22</p>
+            <p>Location: Sculpture Garden</p>
+            <p>Offense: Discarding gum wrappers</p>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a href="/lost">
+          <div class="card1">
+            <img
+              src="{{ url_for('static', filename='imgs/lost_and_found_imgs/pranjal.jpeg') }}"
+            />
+            <h3>Ajay Kumar</h3>
+            <p>Date: 2023-07-15</p>
+            <p>Location: North Gate</p>
+            <p>Offense: Littering near historical statue</p>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a href="/litteringculprits">
+          <div class="card1 culprits">
+            <img
+              src="{{ url_for('static', filename='imgs/lost_and_found_imgs/pranjal.jpeg') }}"
+            />
+            <h3>Simran Bhatt</h3>
+            <p>Date: 2023-08-03</p>
+            <p>Location: East Garden</p>
+            <p>Offense: Discarding plastic bottles</p>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a href="/echalaan">
+          <div class="card1">
+            <img
+              src="{{ url_for('static', filename='imgs/lost_and_found_imgs/pranjal.jpeg') }}"
+            />
+            <h3>Rohit Singh</h3>
+            <p>Date: 2023-09-21</p>
+            <p>Location: Main Courtyard</p>
+            <p>Offense: Dropping food wrappers</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <a href="/peopleinmonument">
+          <div class="card1">
+            <img
+              src="{{ url_for('static', filename='imgs/lost_and_found_imgs/pranjal.jpeg') }}"
+            />
+            <h3>Neha Patel</h3>
+            <p>Date: 2023-10-11</p>
+            <p>Location: West Entrance</p>
+            <p>Offense: Leaving cans and napkins</p>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a href="/lost">
+          <div class="card1">
+            <img
+              src="{{ url_for('static', filename='imgs/lost_and_found_imgs/pranjal.jpeg') }}"
+            />
+            <h3>Vinay Sharma</h3>
+            <p>Date: 2023-11-02</p>
+            <p>Location: South Alley</p>
+            <p>Offense: Throwing cigarette butts</p>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a href="/litteringculprits">
+          <div class="card1 culprits">
+            <img
+              src="{{ url_for('static', filename='imgs/lost_and_found_imgs/pranjal.jpeg') }}"
+            />
+            <h3>Deepika Mehta</h3>
+            <p>Date: 2023-12-25</p>
+            <p>Location: Visitor Center</p>
+            <p>Offense: Spilling beverages</p>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a href="/echalaan">
+          <div class="card1">
+            <img
+              src="{{ url_for('static', filename='imgs/lost_and_found_imgs/pranjal.jpeg') }}"
+            />
+            <h3>Ankit Verma</h3>
+            <p>Date: 2024-01-10</p>
+            <p>Location: Historical Exhibit</p>
+            <p>Offense: Leaving food packaging</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="footer">
+      <footer><p>Made with ❤️ by Team Kavach</p></footer>
+    </div>
+  </body>
+</html>

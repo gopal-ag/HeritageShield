@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Heritage Shield</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-div">
+        <img
+          class="logo"
+          src="{{ url_for('static', filename='imgs/logo.png') }}"
+        />
+      </div>
+      <nav class="menu--right" role="navigation">
+        <div class="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul class="menuItem">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Show me more</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <h1 class="main-heading">Heritage Shield</h1>
+    <div class="row">
+      <div class="column">
+        <a href="/peopleinmonument">
+          <div class="card1">
+            <img
+              src="{{ url_for('static', filename='imgs/people-currently-present-in-the-monument-icon.png') }}"
+            />
+            <h3>People currently present in the monument</h3>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a href="/lost">
+          <div class="card1">
+            <img
+              src="{{ url_for('static', filename='imgs/lost-and-found-requests-icon.png') }}"
+            />
+            <h3>Lost and Found requests</h3>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a href="/litteringculprits">
+          <div class="card1 culprits">
+            <img
+              src="{{ url_for('static', filename='imgs/littering-culprits-icon.png') }}"
+            />
+            <h3>Littering Culprits</h3>
+          </div>
+        </a>
+      </div>
+      <div class="column">
+        <a href="/echalaan">
+          <div class="card1">
+            <img
+              src="{{ url_for('static', filename='imgs/status-of-previously-sent-echalaans.png') }}"
+            />
+            <h3>Status of previously sent E-Chalaans</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h1 class="sub-heading">Vandalism Culprits</h1>
+    </div>
+    <div id="card-container"></div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/static/js/updateCards.js"></script>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-top">
+          <img
+            src="http://127.0.0.1:5000/static/images/result_5.jpg"
+            alt="E-Chalan"
+            class="echalan"
+            id="echalan-img"
+          />
+          <div class="echalan-detail">
+            <div class="header"><h3>E-Challan Details</h3></div>
+            <div class="Name"><b>Name:</b>Shaurya d Verma</div>
+            <div class="Name"><b>Camera:</b>Camera F-712</div>
+            <div class="Name"><b>E-Ticket Number:</b>E12345</div>
+            <div class="Name"><b>Time:</b>23rd december, 2023</div>
+            <br />
+            <div class="Amount"><b>Estimated Amount:</b></div>
+            <div class="amount-controls">
+              <button class="decrement-btn" onclick="changeAmount('-')">
+                -
+              </button>
+              <span id="estimated-amount">5000</span>
+              <button class="increment-btn" onclick="changeAmount('+')">
+                +
+              </button>
+            </div>
+            <br />
+            <div class="bt_holder">
+              <button class="impose" onclick="whatsapp()">Impose</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer><p>Made with ❤️ by Team Kavach</p></footer>
+  </body>
+</html>
