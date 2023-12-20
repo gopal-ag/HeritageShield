@@ -8,16 +8,24 @@ The Heritage Site Personnel Portal is designed to assist the staff of heritage s
 
 ### Features
 - Vandalism Monitoring
+  
 Displays photos of individuals caught vandalizing the monument.
 Shows the specific camera that captured the vandalism.
 Includes a button to issue a fine, which is sent via WhatsApp.
+
 - Visitor Count
+  
 Real-time tracking of the number of people present in the monument at any given time.
+
 - Littering Culprits
+  
 Displays photos of individuals caught littering.
 Indicates the specific camera that captured the littering incident.
+
 - Lost and Found Management
+  
 Tracks lost and found requests.
 Utilizes backtracking to locate lost or found objects.
+
 - E-Chalaan Status
 Provides information on previously sent e-Chalaans, including the date sent and the deadline for payment.
