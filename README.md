@@ -70,6 +70,8 @@ Provides a simple and intuitive interface for system operators to manage lost an
 - Compatible hardware for processing video feeds (GPU recommended).
 
 ## Heritage Site Personnel Portal
+![PHOTO-2023-12-19-20-29-44](https://github.com/gopal-ag/HeritageShield/assets/109476637/83f557f7-819f-4ca9-aeb9-c8a5e5ff6120)
+![PHOTO-2023-12-19-20-30-13](https://github.com/gopal-ag/HeritageShield/assets/109476637/be001f48-2a37-453e-a0df-1bdb18635564)
 
 ### Overview
 
